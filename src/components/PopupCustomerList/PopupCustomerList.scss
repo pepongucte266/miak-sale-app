@@ -1,0 +1,13 @@
+.dialog-customer-list-card {
+  .btn-add-new {
+    color: #fff;
+    background-color: $app-purple;
+    border-radius: 12px !important;
+    .q-btn__content {
+      span.block {
+        font-size: 16px !important;
+        font-weight: 500;
+      }
+    }
+  }
+}

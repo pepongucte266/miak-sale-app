@@ -1,0 +1,19 @@
+.tab-bar-btn-add {
+  bottom: 30px;
+  background-color: $app-purple !important;
+  &:active {
+    bottom: 30px;
+    font-size: 26px !important;
+  }
+}
+
+.tab-bar-btn {
+  font-size: 12px !important;
+  &:hover {
+    color: $app-purple !important;
+  }
+  &:active {
+    position: relative !important;
+    bottom: 4px;
+  }
+}

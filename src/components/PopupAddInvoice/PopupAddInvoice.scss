@@ -1,0 +1,142 @@
+.dialog-add-invoice-card {
+  .number-icon {
+    display: block;
+    border: 0.85px solid #000;
+    border-radius: 9999px;
+    width: 20px !important;
+    text-align: center !important;
+    font-size: 14.35px;
+    font-weight: 500;
+    line-height: 18.79px;
+    word-wrap: break-word;
+    margin-right: 8px;
+  }
+  .add-invoice-block {
+    border: 1px solid #000;
+    border-radius: $button-push-border-radius;
+  }
+  .invoice-infomation {
+    display: flex;
+    align-items: center;
+    height: 90px !important;
+    justify-content: space-between;
+    cursor: pointer;
+    .title {
+      font-size: 17px !important;
+      font-weight: 500 !important;
+      line-height: 2rem !important;
+      letter-spacing: 0.0125em !important;
+    }
+    .invoice-date {
+      color: $grey-7;
+    }
+  }
+
+  .client-data {
+    .btn-contacts {
+      background-color: #f3aa68;
+      line-height: 22px;
+      width: 100px !important;
+      .q-btn__content {
+        span.block {
+          font-size: 12px !important;
+        }
+      }
+    }
+    .client-data-body {
+      .client-data-input {
+        .q-placeholder {
+          padding-top: 3px !important;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.5px;
+          word-wrap: break-word;
+        }
+        .q-field__label {
+          top: -1.5px;
+          overflow: hidden;
+          position: absolute;
+          background-color: white;
+          z-index: 1;
+          padding-left: 3px;
+          padding-right: 3px;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+        &.q-textarea {
+          .q-field__control {
+            .q-field__control-container {
+              padding-top: 4px !important;
+            }
+          }
+        }
+      }
+    }
+    .client-data-footer {
+      .ckb-save-contact {
+        .q-checkbox__inner--truthy {
+          color: $app-purple;
+        }
+        .q-checkbox__label {
+          font-size: 17px !important;
+          font-weight: 400;
+          line-height: 22px;
+          word-wrap: break-word;
+        }
+      }
+      .btn-continue {
+        color: #fff;
+        background-color: $app-purple;
+        border-radius: 12px !important;
+        width: 114px;
+        .q-btn__content {
+          span.block {
+            font-size: 16.5px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .item-and-payment {
+    margin-bottom: 125px !important;
+  }
+  .add-invoice-card-action {
+    min-height: 85px !important;
+    border: 1px solid #000;
+    border-radius: $button-push-border-radius !important;
+    .save-as-draft {
+      color: #1c1b1f;
+      font-size: 19px;
+      font-weight: 550;
+      text-decoration: underline;
+      line-height: 22px;
+      word-wrap: break-word;
+      cursor: pointer;
+    }
+    .btn-create {
+      color: #fff;
+      background-color: $app-purple;
+      border-radius: 12px !important;
+      width: 160px;
+      padding: 16px 34px 18px 37px !important;
+      .q-btn__content {
+        span.block {
+          font-size: 20px !important;
+          font-weight: 700;
+        }
+      }
+
+      &.disabled {
+        background-color: #e3e3e4 !important;
+        .q-btn__content {
+          span.block {
+            color: #979799 !important;
+          }
+        }
+      }
+    }
+  }
+}
