@@ -1,0 +1,29 @@
+.home-top-header {
+  background-color: $app-black;
+  .home-top-header-left {
+    width: 48px !important;
+  }
+  .home-month-picker {
+    height: 19px !important;
+    body.screen--xs & {
+      justify-content: flex-start !important;
+    }
+    .home-month-icon {
+      text-align: center;
+      font-size: 16px;
+      font-family: GT Walsheim Pro;
+      font-weight: 400;
+      word-wrap: break-word;
+      background-color: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      :hover,
+      &.selected {
+        background-color: $app-purple;
+      }
+    }
+    :hover {
+      background-color: $app-purple;
+      cursor: pointer;
+    }
+  }
+}
