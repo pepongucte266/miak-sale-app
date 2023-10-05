@@ -33,10 +33,18 @@
 
       <!-- Thoong tin khách hàng -->
       <q-card-section>
-        <div class="add-invoice-block client-data q-pa-md">
-          <div class="row items-center justify-between">
+        <div
+          class="add-invoice-block client-data q-pa-md"
+          :class="!isShowClientData ? 'row' : ''"
+        >
+          <div class="row items-center justify-between full-width">
             <div class="row items-center text-h6">
-              <span class="number-icon">2</span>
+              <span
+                class="number-icon"
+                :class="!isShowClientData ? 'active' : ''"
+                @click="isShowClientData = !isShowClientData"
+                >2</span
+              >
               <span class="title">Client Data</span>
             </div>
             <q-btn
@@ -51,7 +59,7 @@
               @click="openPopupCustomerList"
             />
           </div>
-          <div class="client-data-body q-pt-lg">
+          <div v-show="isShowClientData" class="client-data-body q-pt-lg">
             <div class="row no-wrap justify-between q-pb-lg">
               <q-input
                 outlined
@@ -113,7 +121,7 @@
               />
             </div>
           </div>
-          <div class="client-data-footer">
+          <div v-show="isShowClientData" class="client-data-footer">
             <div class="row justify-between">
               <q-checkbox
                 indeterminate-value="false"
@@ -131,17 +139,34 @@
               />
             </div>
           </div>
+          <div v-if="isShowClientData" class="row justify-center items-center">
+            <q-btn
+              flat
+              :ripple="false"
+              icon="expand_less"
+              @click="isShowClientData = false"
+            />
+          </div>
         </div>
       </q-card-section>
 
       <!-- Thông tin hàng hóa và thanh toán -->
       <q-card-section>
-        <div
-          class="add-invoice-block invoice-infomation item-and-payment q-pa-md"
-        >
+        <div class="add-invoice-block invoice-infomation q-pa-md">
           <div class="row items-center">
             <span class="number-icon">3</span>
-            <span class="title"> Items & Payment </span>
+            <span class="title"> Items </span>
+          </div>
+          <span class="text-red">Add Items Now</span>
+        </div>
+      </q-card-section>
+
+      <!-- Thông tin hàng hóa và thanh toán -->
+      <q-card-section>
+        <div class="add-invoice-block invoice-infomation payment-info q-pa-md">
+          <div class="row items-center">
+            <span class="number-icon">4</span>
+            <span class="title">Payment </span>
           </div>
         </div>
       </q-card-section>
@@ -192,8 +217,10 @@ var invoiceData = reactive({
   Address: 'N03-T1 Ngoại Giao Đoàn',
   CompanyType: 'Service',
 });
+/**Có lưu thông tin khách hàng hay không */
 var isSaveContact = ref(true);
-
+/**Có hiển thị thông tin kh hay không */
+var isShowClientData = ref(true);
 // this is part of our example (so not required)
 function onOKClick() {
   onDialogOK();
