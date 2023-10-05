@@ -10,10 +10,16 @@
     line-height: 18.79px;
     word-wrap: break-word;
     margin-right: 8px;
+    &.active {
+      border: 0.85px solid $app-purple;
+      background-color: $app-purple;
+      color: white;
+    }
   }
   .add-invoice-block {
     border: 1px solid #000;
     border-radius: $button-push-border-radius;
+    min-height: 90px !important;
   }
   .invoice-infomation {
     display: flex;
@@ -100,13 +106,14 @@
     }
   }
 
-  .item-and-payment {
-    margin-bottom: 125px !important;
+  .payment-info {
+    margin-bottom: 110px !important;
   }
   .add-invoice-card-action {
-    min-height: 85px !important;
+    z-index: 1;
     border: 1px solid #000;
-    border-radius: $button-push-border-radius !important;
+    border-top-left-radius: $button-push-border-radius !important;
+    border-top-right-radius: $button-push-border-radius !important;
     .save-as-draft {
       color: #1c1b1f;
       font-size: 19px;
@@ -121,7 +128,6 @@
       background-color: $app-purple;
       border-radius: 12px !important;
       width: 160px;
-      padding: 16px 34px 18px 37px !important;
       .q-btn__content {
         span.block {
           font-size: 20px !important;
